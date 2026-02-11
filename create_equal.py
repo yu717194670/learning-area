@@ -2,9 +2,7 @@ import pandas as pd
 import re
 import os
 
-# -------------------------- 【必须修改：填写你的Excel路径】 --------------------------
-EXCEL_PATH = r"D:\Data\Single_word.xlsx"  # 你的Excel路径
-# --------------------------------------------------------------------------------
+EXCEL_PATH = r"Single_word.xlsx"
 
 # 合并两份txt的所有内容（直接复制，避免路径问题）
 TXT_ALL_CONTENT = """"""

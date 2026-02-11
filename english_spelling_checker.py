@@ -28,7 +28,7 @@ class EnglishSpellingChecker:
         # 方式3：相对路径（代码同目录）
         # self.file_path = "./Single_word.xlsx"
         # ========== windows 路径配置 ==========
-        self.file_path = os.path.expanduser("D:\Data\Single_word.xlsx")
+        self.file_path = os.path.expanduser("Single_word.xlsx")
     
         self.records_file = "learning_records.json"
         self.has_mark_column = False
