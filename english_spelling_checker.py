@@ -53,8 +53,8 @@ class EnglishSpellingChecker:
             # 列名统一处理：转小写 + 去除前后空格
             df.columns = [col.strip().lower() for col in df.columns]
             
-            # 映射必要列
-            required_columns = ['english', 'chinese', 'example']
+            # 映射必要列（新增equal列）
+            required_columns = ['english', 'chinese', 'example', 'equal']
             column_mapping = {}
             
             for req_col in required_columns:
@@ -66,7 +66,7 @@ class EnglishSpellingChecker:
             
             # 创建新的DataFrame
             new_df = pd.DataFrame()
-            for col in ['english', 'chinese', 'example']:
+            for col in ['english', 'chinese', 'example', 'equal']:
                 if column_mapping[col] is not None:
                     new_df[col] = df[column_mapping[col]]
                 else:
@@ -100,9 +100,10 @@ class EnglishSpellingChecker:
             new_df = new_df[new_df['english'] != 'nan']
             new_df = new_df[new_df['english'] != 'null']
             
-            # 处理中文列和例句列
+            # 处理其他列（新增equal列清洗）
             new_df['chinese'] = new_df['chinese'].astype(str).str.strip()
             new_df['example'] = new_df['example'].astype(str).str.strip()
+            new_df['equal'] = new_df['equal'].astype(str).str.strip()
             
             print(f"✅ 清洗后剩余单词总数: {len(new_df)}")
             
@@ -206,14 +207,29 @@ class EnglishSpellingChecker:
         except Exception as e:
             print(f"{self.COLORS['yellow']}⚠️  同步更新Excel mark列失败: {str(e)}{self.COLORS['reset']}")
     
-    def _get_example_hint(self, word_data):
-        """获取例句或字母提示"""
-        example_hint = word_data['example'].strip()
-        if example_hint and example_hint != "nan":
-            return f"{self.COLORS['cyan']}提示：{example_hint}{self.COLORS['reset']}"
+    def _get_example_hint(self, word_data, attempt_num=1):
+        """
+        获取例句/Equal/字母提示（新增Equal列内容展示）
+        :param word_data: 单词数据字典
+        :param attempt_num: 当前尝试次数（1表示第一次错误）
+        """
+        # 第一次错误时优先展示Equal列内容
+        equal_content = word_data['equal'].strip()
+        if attempt_num == 1 and equal_content and equal_content != "nan":
+            hint = f"{self.COLORS['cyan']}提示：\n{equal_content}{self.COLORS['reset']}"
+            # 如果有例句，补充展示
+            example_hint = word_data['example'].strip()
+            if example_hint and example_hint != "nan":
+                hint += f"\n{self.COLORS['cyan']}联想：{example_hint}{self.COLORS['reset']}"
+            return hint
+        # 非第一次错误或无Equal内容时，展示原有提示
         else:
-            english_word = word_data['english'].lower()
-            return f"{self.COLORS['cyan']}提示：单词以 '{english_word[0]}' 开头，共 {len(english_word)} 个字母{self.COLORS['reset']}"
+            example_hint = word_data['example'].strip()
+            if example_hint and example_hint != "nan":
+                return f"{self.COLORS['cyan']}提示：{example_hint}{self.COLORS['reset']}"
+            else:
+                english_word = word_data['english'].lower()
+                return f"{self.COLORS['cyan']}提示：单词以 '{english_word[0]}' 开头，共 {len(english_word)} 个字母{self.COLORS['reset']}"
     
     def _get_correct_spelling(self, word_data):
         """返回正确拼写提示"""
@@ -274,44 +290,57 @@ class EnglishSpellingChecker:
     
     def check_spelling(self, word_data, quiz_mode=False):
         """
-        检查单个单词拼写
+        检查单个单词拼写（修复：仅大写 E 退出）
         :param word_data: 单词数据字典
         :param quiz_mode: 是否为测验模式（2次机会）
-        :return: 是否拼写正确
+        :return: (是否拼写正确, 是否停止测验)
         """
         english_word = word_data['english'].lower()
         chinese_meaning = word_data['chinese']
-        
+
         # 显示题目
         print(f"\n{self.COLORS['blue']}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{self.COLORS['reset']}")
         print(f"{self.COLORS['bold']}请拼写单词：{self.COLORS['yellow']}{chinese_meaning}{self.COLORS['reset']}")
-        
+
         attempts = 0
         is_correct = False
+        stop_quiz = False
         max_attempts = 2 if quiz_mode else 3  # 测验模式2次机会，普通模式3次
-        
-        while attempts < max_attempts and not is_correct:
-            user_input = input(f"\n{self.COLORS['purple']}请输入拼写: {self.COLORS['reset']}").strip().lower()
+
+        while attempts < max_attempts and not is_correct and not stop_quiz:
+            user_input = input(f"\n{self.COLORS['purple']}请输入拼写: {self.COLORS['reset']}").strip()
+
+            # 仅输入大写 E 才退出，其他都正常判题
+            if user_input == 'E':
+                stop_quiz = True
+                print(f"{self.COLORS['yellow']}⚠️  已停止当前测验/练习{self.COLORS['reset']}")
+                continue
+
+            # 转小写判题，不影响正常拼写
+            user_input = user_input.lower()
+
             attempts += 1
-            
+
             if user_input == english_word:
                 is_correct = True
                 print(f"{self.COLORS['green']}✓ 恭喜！拼写正确！{self.COLORS['reset']}")
             else:
                 if attempts < max_attempts:
                     print(f"{self.COLORS['red']}✗ 拼写错误！{self.COLORS['reset']}")
-                    print(self._get_example_hint(word_data))
-                    print(f"{self.COLORS['yellow']}⚠️  还有 {max_attempts - attempts} 次尝试机会{self.COLORS['reset']}")
+                    print(self._get_example_hint(word_data, attempts))
+                    # print(f"{self.COLORS['yellow']}⚠️  还有 {max_attempts - attempts} 次尝试机会{self.COLORS['reset']}")
                 else:
                     print(f"{self.COLORS['red']}✗ 拼写错误！{self.COLORS['reset']}")
                     print(self._get_correct_spelling(word_data))
-        
-        # 更新学习记录
-        self._update_learning_record(english_word, is_correct)
-        return is_correct
+
+        # 只有非停止状态才更新学习记录
+        if not stop_quiz:
+            self._update_learning_record(english_word, is_correct)
+
+        return is_correct, stop_quiz
     
     def _redo_wrong_words(self, wrong_words):
-        """重做错题功能"""
+        """重做错题功能（新增停止逻辑）"""
         if not wrong_words:
             print(f"{self.COLORS['green']}✓ 没有错误单词需要重做！{self.COLORS['reset']}")
             return
@@ -320,34 +349,45 @@ class EnglishSpellingChecker:
         print("=" * 50)
         print(f"{self.COLORS['yellow']}重做规则：{self.COLORS['reset']}")
         print("1. 每题有3次尝试机会")
-        print("2. 首次错误后提供提示，第二次错误显示正确拼写")
+        print("2. 首次错误后提供提示（含Equal列），第二次错误显示正确拼写")
         print("3. 错误单词会自动标记为重点单词（mark=1）")
         print("4. 完成后显示重做成绩")
+        print(f"{self.COLORS['cyan']}💡 输入'E'可停止重做{self.COLORS['reset']}")
         print("=" * 50)
         
         input(f"{self.COLORS['cyan']}按回车键开始重做...{self.COLORS['reset']}")
         
         redo_correct = 0
+        stop_redo = False
         start_time = time.time()
         
         # 逐个练习错误单词
         for i, word_data in enumerate(wrong_words, 1):
+            if stop_redo:
+                break
+                
             print(f"\n{self.COLORS['bold']}{self.COLORS['red']}【重做】单词 {i}/{len(wrong_words)}{self.COLORS['reset']}")
-            if self.check_spelling(word_data, quiz_mode=False):
+            is_correct, stop_redo = self.check_spelling(word_data, quiz_mode=False)
+            if is_correct and not stop_redo:
                 redo_correct += 1
         
         # 统计重做结果
         end_time = time.time()
         redo_elapsed = round(end_time - start_time, 2)
-        redo_accuracy = round(redo_correct / len(wrong_words) * 100, 1) if wrong_words else 100
+        completed_count = i if stop_redo else len(wrong_words)
+        redo_accuracy = round(redo_correct / completed_count * 100, 1) if completed_count > 0 else 0
         
-        print(f"\n{self.COLORS['bold']}{self.COLORS['purple']}🏆 错题重做完成！{self.COLORS['reset']}")
+        if stop_redo:
+            print(f"\n{self.COLORS['yellow']}⚠️  错题重做已停止{self.COLORS['reset']}")
+        else:
+            print(f"\n{self.COLORS['bold']}{self.COLORS['purple']}🏆 错题重做完成！{self.COLORS['reset']}")
+        
         print("=" * 60)
-        print(f"错题总数：{len(wrong_words)}")
-        print(f"重做正确：{self.COLORS['green']}{redo_correct}{self.COLORS['reset']}")
-        print(f"重做错误：{self.COLORS['red']}{len(wrong_words) - redo_correct}{self.COLORS['reset']}")
-        print(f"重做正确率：{self.COLORS['bold']}{redo_accuracy}%{self.COLORS['reset']}")
-        print(f"重做用时：{redo_elapsed} 秒")
+        print(f"已完成单词数：{completed_count}/{len(wrong_words)}")
+        print(f"正确拼写：{self.COLORS['green']}{redo_correct}{self.COLORS['reset']}")
+        print(f"错误拼写：{self.COLORS['red']}{completed_count - redo_correct}{self.COLORS['reset']}")
+        print(f"正确率：{self.COLORS['bold']}{redo_accuracy}%{self.COLORS['reset']}")
+        print(f"用时：{redo_elapsed} 秒")
         
         # 保存记录
         self._save_learning_records()
@@ -355,7 +395,7 @@ class EnglishSpellingChecker:
         input(f"\n{self.COLORS['yellow']}按回车键返回主菜单...{self.COLORS['reset']}")
     
     def start_100_quiz(self):
-        """100题随机测验功能"""
+        """100题随机测验功能（新增停止测验逻辑）"""
         if not self.words_data:
             print(f"{self.COLORS['red']}✗ 错误：没有可用的单词数据！{self.COLORS['reset']}")
             input(f"\n{self.COLORS['yellow']}按回车键返回主菜单...{self.COLORS['reset']}")
@@ -371,10 +411,11 @@ class EnglishSpellingChecker:
         print("=" * 50)
         print(f"{self.COLORS['yellow']}测验规则：{self.COLORS['reset']}")
         print("1. 每题有2次拼写机会")
-        print("2. 第一次错误显示提示，第二次错误显示正确拼写")
+        print("2. 第一次错误显示提示（含Equal列），第二次错误显示正确拼写")
         print("3. 错误单词会自动标记为重点单词（mark=1）")
         print("4. 完成后显示详细成绩")
         print("5. 可选择重做所有错误单词")
+        print(f"{self.COLORS['cyan']}💡 输入'E'可随时停止测验{self.COLORS['reset']}")
         print("=" * 50)
         
         input(f"{self.COLORS['cyan']}按回车键开始测验...{self.COLORS['reset']}")
@@ -384,68 +425,83 @@ class EnglishSpellingChecker:
         
         correct_count = 0
         wrong_words = []
+        stop_quiz = False
         start_time = time.time()
         
         # 开始测验
         for i, word_data in enumerate(practice_words, 1):
+            if stop_quiz:
+                break
+                
             print(f"\n{self.COLORS['bold']}{self.COLORS['blue']}【测验】单词 {i}/{quiz_count}{self.COLORS['reset']}")
-            is_correct = self.check_spelling(word_data, quiz_mode=True)
-            if is_correct:
+            is_correct, stop_quiz = self.check_spelling(word_data, quiz_mode=True)
+            if is_correct and not stop_quiz:
                 correct_count += 1
-            else:
+            elif not is_correct and not stop_quiz:
                 wrong_words.append(word_data)
         
         # 测验统计
         end_time = time.time()
         elapsed_time = round(end_time - start_time, 2)
-        accuracy = round(correct_count / quiz_count * 100, 1) if quiz_count > 0 else 0
+        completed_count = i if stop_quiz else quiz_count
+        accuracy = round(correct_count / completed_count * 100, 1) if completed_count > 0 else 0
         
-        print(f"\n{self.COLORS['bold']}{self.COLORS['purple']}🏆 测验完成！{self.COLORS['reset']}")
+        if stop_quiz:
+            print(f"\n{self.COLORS['yellow']}⚠️  100题测验已停止{self.COLORS['reset']}")
+        else:
+            print(f"\n{self.COLORS['bold']}{self.COLORS['purple']}🏆 测验完成！{self.COLORS['reset']}")
+        
         print("=" * 60)
-        print(f"总题数：{quiz_count}")
+        print(f"已完成题数：{completed_count}/{quiz_count}")
         print(f"正确拼写：{self.COLORS['green']}{correct_count}{self.COLORS['reset']}")
-        print(f"错误拼写：{self.COLORS['red']}{quiz_count - correct_count}{self.COLORS['reset']}")
+        print(f"错误拼写：{self.COLORS['red']}{completed_count - correct_count}{self.COLORS['reset']}")
         print(f"正确率：{self.COLORS['bold']}{accuracy}%{self.COLORS['reset']}")
         print(f"总用时：{elapsed_time} 秒")
-        print(f"平均每题用时：{round(elapsed_time/quiz_count, 2)} 秒")
+        if completed_count > 0:
+            print(f"平均每题用时：{round(elapsed_time/completed_count, 2)} 秒")
         
-        # 评级
-        if accuracy >= 90:
-            grade = f"{self.COLORS['green']}优秀 (S级){self.COLORS['reset']}"
-        elif accuracy >= 80:
-            grade = f"{self.COLORS['green']}良好 (A级){self.COLORS['reset']}"
-        elif accuracy >= 70:
-            grade = f"{self.COLORS['yellow']}中等 (B级){self.COLORS['reset']}"
-        elif accuracy >= 60:
-            grade = f"{self.COLORS['yellow']}及格 (C级){self.COLORS['reset']}"
-        else:
-            grade = f"{self.COLORS['red']}不及格 (D级){self.COLORS['reset']}"
-        print(f"综合评级：{grade}")
+        # 评级（仅完成时显示）
+        if not stop_quiz:
+            if accuracy >= 90:
+                grade = f"{self.COLORS['green']}优秀 (S级){self.COLORS['reset']}"
+            elif accuracy >= 80:
+                grade = f"{self.COLORS['green']}良好 (A级){self.COLORS['reset']}"
+            elif accuracy >= 70:
+                grade = f"{self.COLORS['yellow']}中等 (B级){self.COLORS['reset']}"
+            elif accuracy >= 60:
+                grade = f"{self.COLORS['yellow']}及格 (C级){self.COLORS['reset']}"
+            else:
+                grade = f"{self.COLORS['red']}不及格 (D级){self.COLORS['reset']}"
+            print(f"综合评级：{grade}")
         
-        # 保存测验记录
+        # 保存测验记录（仅完成时保存完整记录）
         try:
-            clean_grade = grade.replace('\033[32m', '').replace('\033[33m', '').replace('\033[31m', '').replace('\033[0m', '')
-            quiz_record = {
-                "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-                "total": quiz_count,
-                "correct": correct_count,
-                "accuracy": accuracy,
-                "time_used": elapsed_time,
-                "grade": clean_grade,
-                "wrong_count": len(wrong_words)
-            }
+            if not stop_quiz:
+                clean_grade = grade.replace('\033[32m', '').replace('\033[33m', '').replace('\033[31m', '').replace('\033[0m', '')
+                quiz_record = {
+                    "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                    "total": quiz_count,
+                    "correct": correct_count,
+                    "accuracy": accuracy,
+                    "time_used": elapsed_time,
+                    "grade": clean_grade,
+                    "wrong_count": len(wrong_words)
+                }
+                
+                if 'quiz_records' not in self.learning_records['stats']:
+                    self.learning_records['stats']['quiz_records'] = []
+                self.learning_records['stats']['quiz_records'].append(quiz_record)
+                print(f"{self.COLORS['green']}✓ 测验记录已保存{self.COLORS['reset']}")
+            else:
+                print(f"{self.COLORS['yellow']}⚠️  测验未完成，不保存完整测验记录（学习记录已保存）{self.COLORS['reset']}")
             
-            if 'quiz_records' not in self.learning_records['stats']:
-                self.learning_records['stats']['quiz_records'] = []
-            self.learning_records['stats']['quiz_records'].append(quiz_record)
             self._save_learning_records()
-            print(f"{self.COLORS['green']}✓ 测验记录已保存{self.COLORS['reset']}")
             
         except Exception as e:
-            print(f"{self.COLORS['yellow']}⚠️  保存测验记录失败：{str(e)}{self.COLORS['reset']}")
+            print(f"{self.COLORS['yellow']}⚠️  保存记录失败：{str(e)}{self.COLORS['reset']}")
         
-        # 显示错误单词
-        if wrong_words:
+        # 显示错误单词（仅完成时）
+        if not stop_quiz and wrong_words:
             print(f"\n{self.COLORS['red']}❌ 错误单词列表 ({len(wrong_words)}个):{self.COLORS['reset']}")
             print("-" * 50)
             display_count = min(10, len(wrong_words))
@@ -456,8 +512,8 @@ class EnglishSpellingChecker:
         
         print("\n" + "=" * 60)
         
-        # 询问是否重做错题
-        if wrong_words:
+        # 询问是否重做错题（仅完成且有错题时）
+        if not stop_quiz and wrong_words:
             while True:
                 redo_choice = input(f"\n{self.COLORS['yellow']}是否要重做这些错误单词？(y/n): {self.COLORS['reset']}").strip().lower()
                 if redo_choice in ['y', 'n']:
@@ -467,11 +523,13 @@ class EnglishSpellingChecker:
             if redo_choice == 'y':
                 self._redo_wrong_words(wrong_words)
         else:
-            print(f"\n{self.COLORS['green']}🎉 恭喜！所有单词拼写都正确！{self.COLORS['reset']}")
+            if not stop_quiz:
+                print(f"\n{self.COLORS['green']}🎉 恭喜！所有单词拼写都正确！{self.COLORS['reset']}")
+            
             input(f"\n{self.COLORS['yellow']}按回车键返回主菜单...{self.COLORS['reset']}")
     
     def start_practice(self):
-        """开始拼写练习（重点单词/随机/困难单词）"""
+        """开始拼写练习（新增停止逻辑+返回上一页功能）"""
         if not self.words_data:
             print(f"{self.COLORS['red']}✗ 错误：没有可用的单词数据！{self.COLORS['reset']}")
             input(f"\n{self.COLORS['yellow']}按回车键返回主菜单...{self.COLORS['reset']}")
@@ -480,15 +538,16 @@ class EnglishSpellingChecker:
         print(f"\n{self.COLORS['bold']}{self.COLORS['purple']}📚 开始英语拼写练习 {self.COLORS['reset']}")
         print("=" * 50)
         
-        # 显示练习模式选项
+        # 显示练习模式选项（新增返回上一页选项）
         print(f"\n{self.COLORS['yellow']}请选择练习模式：{self.COLORS['reset']}")
         print("1. 随机单词练习")
         print("2. 困难单词练习（正确率低的单词）")
         if self.has_mark_column:
             print("3. 重点单词练习（标记为1的单词）")
+        print("0. 返回上一页（主菜单）")
         
         # 验证模式选择
-        valid_choices = ['1', '2']
+        valid_choices = ['0', '1', '2']
         if self.has_mark_column:
             valid_choices.append('3')
         
@@ -498,13 +557,28 @@ class EnglishSpellingChecker:
                 break
             print(f"{self.COLORS['red']}✗ 无效选择，请输入 {'、'.join(valid_choices)}{self.COLORS['reset']}")
         
+        # 返回上一页（主菜单）
+        if mode_choice == '0':
+            print(f"{self.COLORS['blue']}🔙 返回主菜单...{self.COLORS['reset']}")
+            return
+        
         # 处理重点单词练习模式
         if mode_choice == '3' and self.has_mark_column:
             practice_words = self._get_all_target_mark_words()
             
             if not practice_words:
                 print(f"\n{self.COLORS['yellow']}⚠️  没有找到标记为1的单词！{self.COLORS['reset']}")
-                input(f"\n{self.COLORS['yellow']}按回车键返回主菜单...{self.COLORS['reset']}")
+                # 练习模式为空时，询问是否返回或重新选择
+                while True:
+                    back_choice = input(f"\n{self.COLORS['yellow']}是否返回上一页重新选择？(y/n): {self.COLORS['reset']}").strip().lower()
+                    if back_choice in ['y', 'n']:
+                        break
+                    print(f"{self.COLORS['red']}✗ 请输入 y 或 n{self.COLORS['reset']}")
+                
+                if back_choice == 'y':
+                    self.start_practice()
+                else:
+                    input(f"\n{self.COLORS['yellow']}按回车键返回主菜单...{self.COLORS['reset']}")
                 return
             
             # 打乱单词顺序
@@ -516,12 +590,19 @@ class EnglishSpellingChecker:
         elif mode_choice == '1':
             while True:
                 try:
-                    count = int(input(f"\n{self.COLORS['purple']}请输入要练习的单词数量: {self.COLORS['reset']}"))
+                    count_input = input(f"\n{self.COLORS['purple']}请输入要练习的单词数量 (输入0返回上一页): {self.COLORS['reset']}")
+                    # 支持输入0返回上一页
+                    if count_input.strip() == '0':
+                        print(f"{self.COLORS['blue']}🔙 返回上一页...{self.COLORS['reset']}")
+                        self.start_practice()
+                        return
+                    
+                    count = int(count_input)
                     if 1 <= count <= len(self.words_data):
                         break
                     print(f"{self.COLORS['red']}✗ 请输入1到{len(self.words_data)}之间的数字{self.COLORS['reset']}")
                 except ValueError:
-                    print(f"{self.COLORS['red']}✗ 请输入有效的数字{self.COLORS['reset']}")
+                    print(f"{self.COLORS['red']}✗ 请输入有效的数字（输入0可返回上一页）{self.COLORS['reset']}")
             
             practice_words = random.sample(self.words_data, count)
             print(f"\n{self.COLORS['green']}✅ 已随机选择 {count} 个单词进行练习{self.COLORS['reset']}")
@@ -531,45 +612,65 @@ class EnglishSpellingChecker:
         elif mode_choice == '2':
             while True:
                 try:
-                    count = int(input(f"\n{self.COLORS['purple']}请输入要练习的单词数量: {self.COLORS['reset']}"))
+                    count_input = input(f"\n{self.COLORS['purple']}请输入要练习的单词数量 (输入0返回上一页): {self.COLORS['reset']}")
+                    # 支持输入0返回上一页
+                    if count_input.strip() == '0':
+                        print(f"{self.COLORS['blue']}🔙 返回上一页...{self.COLORS['reset']}")
+                        self.start_practice()
+                        return
+                    
+                    count = int(count_input)
                     if 1 <= count <= len(self.words_data):
                         break
                     print(f"{self.COLORS['red']}✗ 请输入1到{len(self.words_data)}之间的数字{self.COLORS['reset']}")
                 except ValueError:
-                    print(f"{self.COLORS['red']}✗ 请输入有效的数字{self.COLORS['reset']}")
+                    print(f"{self.COLORS['red']}✗ 请输入有效的数字（输入0可返回上一页）{self.COLORS['reset']}")
             
             practice_words = self._get_difficult_words(count)
             print(f"\n{self.COLORS['green']}✅ 已选择 {count} 个需要加强的单词进行练习{self.COLORS['reset']}")
         
-        # 开始练习
+        # 开始练习（新增停止逻辑）
+        print(f"\n{self.COLORS['cyan']}💡 练习过程中输入'E'可随时停止练习{self.COLORS['reset']}")
+        input(f"{self.COLORS['cyan']}按回车键开始练习...{self.COLORS['reset']}")
+        
         correct_count = 0
         wrong_words = []
+        stop_practice = False
         start_time = time.time()
         
         for i, word_data in enumerate(practice_words, 1):
+            if stop_practice:
+                break
+                
             print(f"\n{self.COLORS['bold']}{self.COLORS['blue']}单词 {i}/{count}{self.COLORS['reset']}")
-            if self.check_spelling(word_data, quiz_mode=False):
+            is_correct, stop_practice = self.check_spelling(word_data, quiz_mode=False)
+            if is_correct and not stop_practice:
                 correct_count += 1
-            else:
+            elif not is_correct and not stop_practice:
                 wrong_words.append(word_data)
         
         # 练习统计
         end_time = time.time()
         elapsed_time = round(end_time - start_time, 2)
-        accuracy = round(correct_count / count * 100, 1) if count > 0 else 0
+        completed_count = i if stop_practice else count
+        accuracy = round(correct_count / completed_count * 100, 1) if completed_count > 0 else 0
         
-        print(f"\n{self.COLORS['bold']}{self.COLORS['purple']}📊 练习完成！{self.COLORS['reset']}")
+        if stop_practice:
+            print(f"\n{self.COLORS['yellow']}⚠️  拼写练习已停止{self.COLORS['reset']}")
+        else:
+            print(f"\n{self.COLORS['bold']}{self.COLORS['purple']}📊 练习完成！{self.COLORS['reset']}")
+        
         print("=" * 50)
-        print(f"总单词数：{count}")
+        print(f"已完成单词数：{completed_count}/{count}")
         print(f"正确拼写：{self.COLORS['green']}{correct_count}{self.COLORS['reset']}")
-        print(f"错误拼写：{self.COLORS['red']}{count - correct_count}{self.COLORS['reset']}")
+        print(f"错误拼写：{self.COLORS['red']}{completed_count - correct_count}{self.COLORS['reset']}")
         print(f"正确率：{self.COLORS['bold']}{accuracy}%{self.COLORS['reset']}")
         print(f"用时：{elapsed_time} 秒")
         
         self._save_learning_records()
         
-        # 重点单词练习完成后，询问是否重做错题
-        if mode_choice == '3' and wrong_words:
+        # 重点单词练习完成后，询问是否重做错题（仅完成时）
+        if mode_choice == '3' and not stop_practice and wrong_words:
             while True:
                 redo_choice = input(f"\n{self.COLORS['yellow']}是否要重做这些错误的重点单词？(y/n): {self.COLORS['reset']}").strip().lower()
                 if redo_choice in ['y', 'n']:
@@ -579,20 +680,28 @@ class EnglishSpellingChecker:
             if redo_choice == 'y':
                 self._redo_wrong_words(wrong_words)
         else:
-            # 其他模式询问是否继续练习
-            while True:
-                choice = input(f"\n{self.COLORS['yellow']}是否继续练习？(y/n): {self.COLORS['reset']}").strip().lower()
-                if choice in ['y', 'n']:
-                    break
-                print(f"{self.COLORS['red']}✗ 请输入 y 或 n{self.COLORS['reset']}")
-            
-            if choice == 'y':
-                self.start_practice()
+            # 其他模式询问是否继续练习（仅完成时）
+            if not stop_practice:
+                while True:
+                    choice = input(f"\n{self.COLORS['yellow']}请选择：1-继续练习  2-返回上一页  3-返回主菜单: {self.COLORS['reset']}").strip()
+                    if choice in ['1', '2', '3']:
+                        break
+                    print(f"{self.COLORS['red']}✗ 请输入 1、2 或 3{self.COLORS['reset']}")
+                
+                if choice == '1':
+                    self.start_practice()
+                elif choice == '2':
+                    print(f"{self.COLORS['blue']}🔙 返回练习模式选择页...{self.COLORS['reset']}")
+                    self.start_practice()
+                else:
+                    print(f"{self.COLORS['blue']}🔙 返回主菜单...{self.COLORS['reset']}")
+                    input(f"\n{self.COLORS['yellow']}按回车键返回主菜单...{self.COLORS['reset']}")
             else:
+                # 停止练习时直接返回主菜单
                 input(f"\n{self.COLORS['yellow']}按回车键返回主菜单...{self.COLORS['reset']}")
     
     def show_word_list(self):
-        """查看单词列表（支持分页、搜索、筛选）"""
+        """查看单词列表（支持分页、搜索、筛选，新增Equal列展示）"""
         print(f"\n{self.COLORS['bold']}{self.COLORS['purple']}📖 英语单词列表 {self.COLORS['reset']}")
         print("=" * 60)
         
@@ -618,11 +727,12 @@ class EnglishSpellingChecker:
             print(f"{self.COLORS['bold']}{self.COLORS['purple']}📖 英语单词列表 (共{len(sorted_words)}个单词，第{current_page}/{total_pages}页) {self.COLORS['reset']}")
             print("=" * 80)
             
-            # 表头
+            # 表头（新增Equal列）
             header_parts = [
                 f"{self.COLORS['cyan']}{'序号':<4}",
                 f"{'英语单词':<12}",
-                f"{'中文释义':<15}"
+                f"{'中文释义':<15}",
+                f"{'Equal':<15}"
             ]
             if self.has_mark_column:
                 header_parts.append(f"{'标记状态':<12}")
@@ -638,9 +748,10 @@ class EnglishSpellingChecker:
                 word = sorted_words[i]
                 english = word['english'][:10] + '...' if len(word['english']) > 10 else word['english']
                 chinese = word['chinese'][:13] + '...' if len(word['chinese']) > 13 else word['chinese']
+                equal = word['equal'][:13] + '...' if len(word['equal']) > 13 else word['equal']
                 
                 # 构建行内容
-                row_parts = [f"{idx:<4}", f"{english:<12}", f"{chinese:<15}"]
+                row_parts = [f"{idx:<4}", f"{english:<12}", f"{chinese:<15}", f"{equal:<15}"]
                 
                 # 标记状态
                 if self.has_mark_column:
@@ -670,13 +781,13 @@ class EnglishSpellingChecker:
                 current_page -= 1
             elif choice == 's':
                 keyword = input(f"\n{self.COLORS['purple']}请输入要搜索的单词或中文释义: {self.COLORS['reset']}").lower()
-                results = [word for word in sorted_words if keyword in word['english'].lower() or keyword in word['chinese'].lower()]
+                results = [word for word in sorted_words if keyword in word['english'].lower() or keyword in word['chinese'].lower() or keyword in word['equal'].lower()]
                 
                 print(f"\n{self.COLORS['cyan']}🔍 搜索结果 (共{len(results)}个):{self.COLORS['reset']}")
                 if results:
                     for i, word in enumerate(results[:10], 1):
                         mark_tag = f" [{self.COLORS['red']}重点{self.COLORS['reset']}]" if word.get('mark') in self.target_marks else ""
-                        print(f"   {i}. {word['english']} - {word['chinese']}{mark_tag}")
+                        print(f"   {i}. {word['english']} - {word['chinese']} - {word['equal']}{mark_tag}")
                     if len(results) > 10:
                         print(f"   ... 还有 {len(results)-10} 个匹配结果")
                 else:
@@ -688,7 +799,7 @@ class EnglishSpellingChecker:
                 print(f"\n{self.COLORS['cyan']}🔍 重点单词筛选结果 (共{len(focus_words)}个):{self.COLORS['reset']}")
                 if focus_words:
                     for i, word in enumerate(focus_words[:10], 1):
-                        print(f"   {i}. {word['english']} - {word['chinese']} [{self.COLORS['red']}重点{self.COLORS['reset']}]")
+                        print(f"   {i}. {word['english']} - {word['chinese']} - {word['equal']} [{self.COLORS['red']}重点{self.COLORS['reset']}]")
                     if len(focus_words) > 10:
                         print(f"   ... 还有 {len(focus_words)-10} 个重点单词")
                 else:
@@ -810,7 +921,7 @@ class EnglishSpellingChecker:
             if self.has_mark_column:
                 focus_count = len(self._get_all_target_mark_words())
                 print(f"🏷️  重点单词（标记为1）：{self.COLORS['red']}{focus_count} 个{self.COLORS['reset']}")
-                print(f"💡 提示：拼写错误的单词会自动标记为重点单词")
+                print(f"💡 提示：拼写错误的单词会自动标记为重点单词，练习时输入'E'可停止")
             
             print("=" * 50)
             print("1. 开始拼写练习")
