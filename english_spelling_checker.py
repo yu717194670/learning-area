@@ -261,8 +261,7 @@ class EnglishSpellingChecker:
         english_word = word_data['english'].lower()
         chinese_meaning = word_data['chinese']
 
-        print(f"\n{self.COLORS['blue']}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━{self.COLORS['reset']}")
-        print(f"{self.COLORS['bold']}请拼写单词：{self.COLORS['yellow']}{chinese_meaning}{self.COLORS['reset']}")
+        print(f"{self.COLORS['bold']}{self.COLORS['yellow']}{chinese_meaning}{self.COLORS['reset']}")
 
         attempts = 0
         is_correct = False
@@ -270,7 +269,7 @@ class EnglishSpellingChecker:
         max_attempts = 2 if quiz_mode else 3
 
         while attempts < max_attempts and not is_correct and not stop_quiz:
-            user_input = input(f"\n{self.COLORS['purple']}请输入拼写: {self.COLORS['reset']}").strip()
+            user_input = input(f"\n{self.COLORS['purple']}: {self.COLORS['reset']}").strip()
 
             if user_input == 'E':
                 stop_quiz = True
@@ -283,17 +282,17 @@ class EnglishSpellingChecker:
 
             if user_input == english_word:
                 is_correct = True
-                print(f"{self.COLORS['green']}✓ 恭喜！拼写正确！{self.COLORS['reset']}")
+                print(f"{self.COLORS['green']}✓{self.COLORS['reset']}")
             else:
                 if attempts < max_attempts:
-                    print(f"{self.COLORS['red']}✗ 拼写错误！{self.COLORS['reset']}")
+                    print(f"{self.COLORS['red']}✗{self.COLORS['reset']}")
                     # ✨ 修改：错误时先显示音节划分，再显示其他提示
                     cut_hint = self._get_cut_hint(word_data)
                     if cut_hint:
                         print(cut_hint)
                     print(self._get_example_hint(word_data, attempts, "spell"))
                 else:
-                    print(f"{self.COLORS['red']}✗ 拼写错误！{self.COLORS['reset']}")
+                    print(f"{self.COLORS['red']}✗{self.COLORS['reset']}")
                     print(self._get_correct_spelling(word_data, "spell"))
 
         if not stop_quiz:
@@ -387,7 +386,7 @@ class EnglishSpellingChecker:
             if stop_redo:
                 break
                 
-            print(f"\n{self.COLORS['bold']}{self.COLORS['red']}【重做】单词 {i}/{len(wrong_words)}{self.COLORS['reset']}")
+            print(f"\n{self.COLORS['bold']}{self.COLORS['red']}{i}/{len(wrong_words)}{self.COLORS['reset']}")
             if practice_type == "spell":
                 is_correct, stop_redo = self.check_spelling(word_data, quiz_mode=False)
             else:
@@ -465,7 +464,7 @@ class EnglishSpellingChecker:
             if stop_quiz:
                 break
                 
-            print(f"\n{self.COLORS['bold']}{self.COLORS['blue']}【测验】单词 {i}/{quiz_count}{self.COLORS['reset']}")
+            print(f"\n{self.COLORS['bold']}{self.COLORS['blue']}{i}/{quiz_count}{self.COLORS['reset']}")
             if practice_type == "spell":
                 is_correct, stop_quiz = self.check_spelling(word_data, quiz_mode=True)
             else:
@@ -558,7 +557,7 @@ class EnglishSpellingChecker:
                 self._redo_wrong_words(wrong_words, practice_type)
         else:
             if not stop_quiz:
-                print(f"\n{self.COLORS['green']}🎉 恭喜！所有单词答题都正确！{self.COLORS['reset']}")
+                print(f"\n{self.COLORS['green']}🎉{self.COLORS['reset']}")
             
             input(f"\n{self.COLORS['yellow']}按回车键返回主菜单...{self.COLORS['reset']}")
     
@@ -677,7 +676,7 @@ class EnglishSpellingChecker:
             if stop_practice:
                 break
                 
-            print(f"\n{self.COLORS['bold']}{self.COLORS['blue']}单词 {i}/{count}{self.COLORS['reset']}")
+            print(f"\n{self.COLORS['bold']}{self.COLORS['blue']}{i}/{count}{self.COLORS['reset']}")
             if practice_type == "spell":
                 is_correct, stop_practice = self.check_spelling(word_data, quiz_mode=False)
             else:
@@ -965,7 +964,7 @@ class EnglishSpellingChecker:
             elif choice == '4':
                 self.show_learning_stats()
             elif choice == '5':
-                print(f"\n{self.COLORS['green']}👋 感谢使用！学习记录已保存{self.COLORS['reset']}")
+                print(f"\n{self.COLORS['green']}👋 save{self.COLORS['reset']}")
                 self._save_learning_records()
                 break
             else:
