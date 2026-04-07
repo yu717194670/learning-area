@@ -73,16 +73,16 @@
       "success_rate": 100.0
     },
     "no": {
-      "attempts": 16,
-      "correct": 16,
-      "last_attempt": "2026-02-26 15:36:50",
+      "attempts": 17,
+      "correct": 17,
+      "last_attempt": "2026-04-07 10:02:49",
       "success_rate": 100.0
     },
     "hundred": {
-      "attempts": 25,
-      "correct": 24,
-      "last_attempt": "2026-03-11 15:32:01",
-      "success_rate": 96.0
+      "attempts": 27,
+      "correct": 25,
+      "last_attempt": "2026-04-07 10:05:42",
+      "success_rate": 92.6
     },
     "river": {
       "attempts": 20,
@@ -97,9 +97,9 @@
       "success_rate": 90.9
     },
     "and": {
-      "attempts": 27,
-      "correct": 27,
-      "last_attempt": "2026-02-26 15:46:30",
+      "attempts": 28,
+      "correct": 28,
+      "last_attempt": "2026-04-07 09:56:54",
       "success_rate": 100.0
     },
     "family": {
@@ -151,9 +151,9 @@
       "success_rate": 100.0
     },
     "leg": {
-      "attempts": 19,
-      "correct": 19,
-      "last_attempt": "2026-02-26 15:45:28",
+      "attempts": 20,
+      "correct": 20,
+      "last_attempt": "2026-04-07 09:55:51",
       "success_rate": 100.0
     },
     "born": {
@@ -367,9 +367,9 @@
       "success_rate": 100.0
     },
     "borrow": {
-      "attempts": 21,
-      "correct": 21,
-      "last_attempt": "2026-03-30 19:45:33",
+      "attempts": 22,
+      "correct": 22,
+      "last_attempt": "2026-04-07 09:57:17",
       "success_rate": 100.0
     },
     "you": {
@@ -427,10 +427,10 @@
       "success_rate": 100.0
     },
     "yes": {
-      "attempts": 21,
-      "correct": 20,
-      "last_attempt": "2026-03-17 16:14:55",
-      "success_rate": 95.2
+      "attempts": 22,
+      "correct": 21,
+      "last_attempt": "2026-04-07 09:43:42",
+      "success_rate": 95.5
     },
     "big": {
       "attempts": 25,
@@ -451,10 +451,10 @@
       "success_rate": 95.2
     },
     "lovely": {
-      "attempts": 20,
-      "correct": 18,
-      "last_attempt": "2026-02-26 14:34:22",
-      "success_rate": 90.0
+      "attempts": 21,
+      "correct": 19,
+      "last_attempt": "2026-04-07 10:01:48",
+      "success_rate": 90.5
     },
     "mother": {
       "attempts": 26,
@@ -517,9 +517,9 @@
       "success_rate": 100.0
     },
     "back": {
-      "attempts": 18,
-      "correct": 18,
-      "last_attempt": "2026-02-26 15:22:21",
+      "attempts": 19,
+      "correct": 19,
+      "last_attempt": "2026-04-07 09:54:16",
       "success_rate": 100.0
     },
     "grow": {
@@ -589,9 +589,9 @@
       "success_rate": 90.0
     },
     "good": {
-      "attempts": 24,
-      "correct": 24,
-      "last_attempt": "2026-03-12 15:28:48",
+      "attempts": 25,
+      "correct": 25,
+      "last_attempt": "2026-04-07 09:56:26",
       "success_rate": 100.0
     },
     "i": {
@@ -655,10 +655,10 @@
       "success_rate": 95.5
     },
     "sad": {
-      "attempts": 19,
-      "correct": 18,
-      "last_attempt": "2026-03-30 19:44:28",
-      "success_rate": 94.7
+      "attempts": 20,
+      "correct": 19,
+      "last_attempt": "2026-04-07 09:56:46",
+      "success_rate": 95.0
     },
     "gold": {
       "attempts": 25,
@@ -667,10 +667,10 @@
       "success_rate": 100.0
     },
     "ending": {
-      "attempts": 27,
-      "correct": 26,
-      "last_attempt": "2026-03-17 16:58:52",
-      "success_rate": 96.3
+      "attempts": 28,
+      "correct": 27,
+      "last_attempt": "2026-04-07 09:57:11",
+      "success_rate": 96.4
     },
     "what": {
       "attempts": 18,
@@ -691,10 +691,10 @@
       "success_rate": 100.0
     },
     "badly": {
-      "attempts": 24,
-      "correct": 21,
-      "last_attempt": "2026-02-28 14:23:43",
-      "success_rate": 87.5
+      "attempts": 25,
+      "correct": 22,
+      "last_attempt": "2026-04-07 09:52:42",
+      "success_rate": 88.0
     },
     "proud": {
       "attempts": 21,
@@ -889,10 +889,10 @@
       "success_rate": 100.0
     },
     "lawyer": {
-      "attempts": 16,
-      "correct": 12,
-      "last_attempt": "2026-03-17 16:44:26",
-      "success_rate": 75.0
+      "attempts": 17,
+      "correct": 13,
+      "last_attempt": "2026-04-07 10:03:09",
+      "success_rate": 76.5
     },
     "why": {
       "attempts": 18,
@@ -919,9 +919,9 @@
       "success_rate": 100.0
     },
     "draw": {
-      "attempts": 17,
-      "correct": 17,
-      "last_attempt": "2026-03-12 15:56:23",
+      "attempts": 18,
+      "correct": 18,
+      "last_attempt": "2026-04-07 09:57:28",
       "success_rate": 100.0
     },
     "wet": {
@@ -973,10 +973,10 @@
       "success_rate": 100.0
     },
     "mend": {
-      "attempts": 23,
-      "correct": 22,
-      "last_attempt": "2026-03-12 15:27:38",
-      "success_rate": 95.7
+      "attempts": 24,
+      "correct": 23,
+      "last_attempt": "2026-04-07 10:04:07",
+      "success_rate": 95.8
     },
     "mind": {
       "attempts": 19,
@@ -1033,10 +1033,10 @@
       "success_rate": 100.0
     },
     "snowy": {
-      "attempts": 20,
-      "correct": 17,
-      "last_attempt": "2026-03-30 17:49:20",
-      "success_rate": 85.0
+      "attempts": 21,
+      "correct": 18,
+      "last_attempt": "2026-04-07 10:04:39",
+      "success_rate": 85.7
     },
     "cold": {
       "attempts": 20,
@@ -1111,15 +1111,15 @@
       "success_rate": 90.3
     },
     "classmate": {
-      "attempts": 22,
-      "correct": 20,
-      "last_attempt": "2026-03-09 15:39:36",
-      "success_rate": 90.9
+      "attempts": 23,
+      "correct": 21,
+      "last_attempt": "2026-04-07 10:00:12",
+      "success_rate": 91.3
     },
     "call": {
-      "attempts": 18,
-      "correct": 18,
-      "last_attempt": "2026-03-09 17:07:03",
+      "attempts": 19,
+      "correct": 19,
+      "last_attempt": "2026-04-07 09:53:01",
       "success_rate": 100.0
     },
     "cover": {
@@ -1177,9 +1177,9 @@
       "success_rate": 100.0
     },
     "miss": {
-      "attempts": 12,
-      "correct": 12,
-      "last_attempt": "2026-03-30 17:41:52",
+      "attempts": 13,
+      "correct": 13,
+      "last_attempt": "2026-04-07 10:00:14",
       "success_rate": 100.0
     },
     "pass": {
@@ -1297,10 +1297,10 @@
       "success_rate": 100.0
     },
     "study": {
-      "attempts": 16,
-      "correct": 15,
-      "last_attempt": "2026-03-30 16:51:08",
-      "success_rate": 93.8
+      "attempts": 17,
+      "correct": 16,
+      "last_attempt": "2026-04-07 09:57:41",
+      "success_rate": 94.1
     },
     "football": {
       "attempts": 12,
@@ -1393,9 +1393,9 @@
       "success_rate": 100.0
     },
     "empty": {
-      "attempts": 14,
-      "correct": 14,
-      "last_attempt": "2026-03-12 15:55:35",
+      "attempts": 15,
+      "correct": 15,
+      "last_attempt": "2026-04-07 10:00:53",
       "success_rate": 100.0
     },
     "let": {
@@ -1477,10 +1477,10 @@
       "success_rate": 92.3
     },
     "hard": {
-      "attempts": 32,
-      "correct": 31,
-      "last_attempt": "2026-03-31 11:12:47",
-      "success_rate": 96.9
+      "attempts": 36,
+      "correct": 35,
+      "last_attempt": "2026-04-07 15:01:43",
+      "success_rate": 97.2
     },
     "sure": {
       "attempts": 11,
@@ -1561,10 +1561,10 @@
       "success_rate": 100.0
     },
     "lucky": {
-      "attempts": 27,
-      "correct": 23,
-      "last_attempt": "2026-03-17 16:45:28",
-      "success_rate": 85.2
+      "attempts": 28,
+      "correct": 24,
+      "last_attempt": "2026-04-07 10:04:27",
+      "success_rate": 85.7
     },
     "year": {
       "attempts": 16,
@@ -1573,15 +1573,15 @@
       "success_rate": 100.0
     },
     "knife": {
-      "attempts": 20,
-      "correct": 19,
-      "last_attempt": "2026-03-30 17:41:50",
-      "success_rate": 95.0
+      "attempts": 21,
+      "correct": 20,
+      "last_attempt": "2026-04-07 09:52:48",
+      "success_rate": 95.2
     },
     "knock": {
-      "attempts": 25,
-      "correct": 25,
-      "last_attempt": "2026-02-26 15:05:41",
+      "attempts": 26,
+      "correct": 26,
+      "last_attempt": "2026-04-07 09:43:32",
       "success_rate": 100.0
     },
     "small": {
@@ -1603,10 +1603,10 @@
       "success_rate": 100.0
     },
     "many": {
-      "attempts": 15,
-      "correct": 13,
-      "last_attempt": "2026-03-17 16:14:42",
-      "success_rate": 86.7
+      "attempts": 16,
+      "correct": 14,
+      "last_attempt": "2026-04-07 09:58:38",
+      "success_rate": 87.5
     },
     "size": {
       "attempts": 11,
@@ -1621,9 +1621,9 @@
       "success_rate": 88.0
     },
     "bucket": {
-      "attempts": 23,
-      "correct": 23,
-      "last_attempt": "2026-03-17 16:57:51",
+      "attempts": 24,
+      "correct": 24,
+      "last_attempt": "2026-04-07 10:03:15",
       "success_rate": 100.0
     },
     "pay": {
@@ -1651,9 +1651,9 @@
       "success_rate": 100.0
     },
     "nurse": {
-      "attempts": 13,
-      "correct": 13,
-      "last_attempt": "2026-03-09 15:37:32",
+      "attempts": 14,
+      "correct": 14,
+      "last_attempt": "2026-04-07 09:43:45",
       "success_rate": 100.0
     },
     "artist": {
@@ -1663,10 +1663,10 @@
       "success_rate": 100.0
     },
     "citizen": {
-      "attempts": 21,
-      "correct": 20,
-      "last_attempt": "2026-03-18 17:14:18",
-      "success_rate": 95.2
+      "attempts": 22,
+      "correct": 21,
+      "last_attempt": "2026-04-07 10:01:04",
+      "success_rate": 95.5
     },
     "luck": {
       "attempts": 25,
@@ -1819,9 +1819,9 @@
       "success_rate": 94.7
     },
     "rain": {
-      "attempts": 5,
-      "correct": 5,
-      "last_attempt": "2026-03-17 16:16:35",
+      "attempts": 6,
+      "correct": 6,
+      "last_attempt": "2026-04-07 09:52:35",
       "success_rate": 100.0
     },
     "waitress": {
@@ -1879,10 +1879,10 @@
       "success_rate": 100.0
     },
     "interesting": {
-      "attempts": 30,
-      "correct": 24,
-      "last_attempt": "2026-03-31 15:13:55",
-      "success_rate": 80.0
+      "attempts": 32,
+      "correct": 26,
+      "last_attempt": "2026-04-07 11:26:58",
+      "success_rate": 81.2
     },
     "car": {
       "attempts": 5,
@@ -1891,10 +1891,10 @@
       "success_rate": 100.0
     },
     "angry": {
-      "attempts": 44,
-      "correct": 35,
-      "last_attempt": "2026-03-18 17:15:23",
-      "success_rate": 79.5
+      "attempts": 45,
+      "correct": 36,
+      "last_attempt": "2026-04-07 09:56:30",
+      "success_rate": 80.0
     },
     "winter": {
       "attempts": 19,
@@ -1903,10 +1903,10 @@
       "success_rate": 84.2
     },
     "toothache": {
-      "attempts": 16,
-      "correct": 15,
-      "last_attempt": "2026-02-26 15:46:44",
-      "success_rate": 93.8
+      "attempts": 17,
+      "correct": 16,
+      "last_attempt": "2026-04-07 09:58:41",
+      "success_rate": 94.1
     },
     "stomachache": {
       "attempts": 39,
@@ -1921,9 +1921,9 @@
       "success_rate": 95.7
     },
     "anger": {
-      "attempts": 34,
-      "correct": 33,
-      "last_attempt": "2026-03-18 17:29:16",
+      "attempts": 35,
+      "correct": 34,
+      "last_attempt": "2026-04-07 09:56:14",
       "success_rate": 97.1
     },
     "cousin": {
@@ -1933,10 +1933,10 @@
       "success_rate": 87.5
     },
     "story": {
-      "attempts": 16,
-      "correct": 14,
-      "last_attempt": "2026-03-30 16:53:07",
-      "success_rate": 87.5
+      "attempts": 17,
+      "correct": 15,
+      "last_attempt": "2026-04-07 09:54:30",
+      "success_rate": 88.2
     },
     "early": {
       "attempts": 23,
@@ -2017,9 +2017,9 @@
       "success_rate": 100.0
     },
     "tooth": {
-      "attempts": 16,
-      "correct": 16,
-      "last_attempt": "2026-03-09 17:17:21",
+      "attempts": 17,
+      "correct": 17,
+      "last_attempt": "2026-04-07 10:04:43",
       "success_rate": 100.0
     },
     "son": {
@@ -2113,9 +2113,9 @@
       "success_rate": 100.0
     },
     "park": {
-      "attempts": 10,
-      "correct": 10,
-      "last_attempt": "2026-03-30 19:45:02",
+      "attempts": 11,
+      "correct": 11,
+      "last_attempt": "2026-04-07 09:57:56",
       "success_rate": 100.0
     },
     "lamp": {
@@ -2149,10 +2149,10 @@
       "success_rate": 100.0
     },
     "policeman": {
-      "attempts": 12,
-      "correct": 11,
-      "last_attempt": "2026-03-31 11:13:22",
-      "success_rate": 91.7
+      "attempts": 13,
+      "correct": 12,
+      "last_attempt": "2026-04-07 10:33:00",
+      "success_rate": 92.3
     },
     "teacher": {
       "attempts": 6,
@@ -2185,9 +2185,9 @@
       "success_rate": 100.0
     },
     "celebration": {
-      "attempts": 26,
-      "correct": 26,
-      "last_attempt": "2026-03-30 17:47:59",
+      "attempts": 27,
+      "correct": 27,
+      "last_attempt": "2026-04-07 09:53:49",
       "success_rate": 100.0
     },
     "skill": {
@@ -2221,9 +2221,9 @@
       "success_rate": 100.0
     },
     "way": {
-      "attempts": 15,
-      "correct": 15,
-      "last_attempt": "2026-03-09 15:53:53",
+      "attempts": 16,
+      "correct": 16,
+      "last_attempt": "2026-04-07 09:52:02",
       "success_rate": 100.0
     },
     "pencil": {
@@ -2281,16 +2281,16 @@
       "success_rate": 100.0
     },
     "skilled": {
-      "attempts": 15,
-      "correct": 15,
-      "last_attempt": "2026-03-09 16:18:41",
+      "attempts": 16,
+      "correct": 16,
+      "last_attempt": "2026-04-07 09:54:20",
       "success_rate": 100.0
     },
     "hair": {
-      "attempts": 13,
-      "correct": 12,
-      "last_attempt": "2026-03-04 15:26:16",
-      "success_rate": 92.3
+      "attempts": 14,
+      "correct": 13,
+      "last_attempt": "2026-04-07 10:04:30",
+      "success_rate": 92.9
     },
     "dollar": {
       "attempts": 16,
@@ -2341,15 +2341,15 @@
       "success_rate": 100.0
     },
     "book": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-12 15:53:58",
+      "attempts": 7,
+      "correct": 7,
+      "last_attempt": "2026-04-07 10:04:33",
       "success_rate": 100.0
     },
     "italian": {
-      "attempts": 16,
-      "correct": 16,
-      "last_attempt": "2026-03-30 19:46:18",
+      "attempts": 17,
+      "correct": 17,
+      "last_attempt": "2026-04-07 09:43:57",
       "success_rate": 100.0
     },
     "celebrate": {
@@ -2437,10 +2437,10 @@
       "success_rate": 95.5
     },
     "wish": {
-      "attempts": 19,
-      "correct": 18,
-      "last_attempt": "2026-03-31 14:52:28",
-      "success_rate": 94.7
+      "attempts": 20,
+      "correct": 19,
+      "last_attempt": "2026-04-07 10:35:21",
+      "success_rate": 95.0
     },
     "value": {
       "attempts": 13,
@@ -2449,9 +2449,9 @@
       "success_rate": 92.3
     },
     "cost": {
-      "attempts": 16,
-      "correct": 16,
-      "last_attempt": "2026-03-30 17:15:10",
+      "attempts": 17,
+      "correct": 17,
+      "last_attempt": "2026-04-07 09:54:39",
       "success_rate": 100.0
     },
     "eraser": {
@@ -2473,10 +2473,10 @@
       "success_rate": 100.0
     },
     "travel": {
-      "attempts": 16,
-      "correct": 14,
-      "last_attempt": "2026-03-04 15:26:24",
-      "success_rate": 87.5
+      "attempts": 17,
+      "correct": 15,
+      "last_attempt": "2026-04-07 10:05:13",
+      "success_rate": 88.2
     },
     "coat": {
       "attempts": 14,
@@ -2491,10 +2491,10 @@
       "success_rate": 8.3
     },
     "camera": {
-      "attempts": 18,
-      "correct": 15,
-      "last_attempt": "2026-02-27 14:56:39",
-      "success_rate": 83.3
+      "attempts": 19,
+      "correct": 16,
+      "last_attempt": "2026-04-07 10:02:57",
+      "success_rate": 84.2
     },
     "fast": {
       "attempts": 19,
@@ -2527,9 +2527,9 @@
       "success_rate": 94.1
     },
     "wolf": {
-      "attempts": 10,
-      "correct": 10,
-      "last_attempt": "2026-02-26 14:55:01",
+      "attempts": 11,
+      "correct": 11,
+      "last_attempt": "2026-04-07 10:00:50",
       "success_rate": 100.0
     },
     "face": {
@@ -2545,9 +2545,9 @@
       "success_rate": 100.0
     },
     "coin": {
-      "attempts": 17,
-      "correct": 17,
-      "last_attempt": "2026-03-09 16:00:07",
+      "attempts": 18,
+      "correct": 18,
+      "last_attempt": "2026-04-07 09:56:37",
       "success_rate": 100.0
     },
     "fish": {
@@ -2605,21 +2605,21 @@
       "success_rate": 91.7
     },
     "push": {
-      "attempts": 2,
-      "correct": 2,
-      "last_attempt": "2026-02-26 15:43:41",
+      "attempts": 3,
+      "correct": 3,
+      "last_attempt": "2026-04-07 10:04:09",
       "success_rate": 100.0
     },
     "fat": {
-      "attempts": 17,
-      "correct": 17,
-      "last_attempt": "2026-03-17 16:59:19",
+      "attempts": 18,
+      "correct": 18,
+      "last_attempt": "2026-04-07 09:57:44",
       "success_rate": 100.0
     },
     "flower": {
-      "attempts": 16,
-      "correct": 16,
-      "last_attempt": "2026-03-18 17:14:45",
+      "attempts": 17,
+      "correct": 17,
+      "last_attempt": "2026-04-07 10:02:46",
       "success_rate": 100.0
     },
     "pull": {
@@ -2641,9 +2641,9 @@
       "success_rate": 100.0
     },
     "food": {
-      "attempts": 13,
-      "correct": 13,
-      "last_attempt": "2026-02-26 15:07:11",
+      "attempts": 14,
+      "correct": 14,
+      "last_attempt": "2026-04-07 10:00:05",
       "success_rate": 100.0
     },
     "fall": {
@@ -2683,9 +2683,9 @@
       "success_rate": 100.0
     },
     "jump": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-18 17:14:30",
+      "attempts": 8,
+      "correct": 8,
+      "last_attempt": "2026-04-07 09:53:04",
       "success_rate": 100.0
     },
     "ready": {
@@ -2707,9 +2707,9 @@
       "success_rate": 100.0
     },
     "month": {
-      "attempts": 11,
-      "correct": 11,
-      "last_attempt": "2026-03-09 17:19:38",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 09:57:14",
       "success_rate": 100.0
     },
     "drive": {
@@ -2731,9 +2731,9 @@
       "success_rate": 100.0
     },
     "serve": {
-      "attempts": 17,
-      "correct": 17,
-      "last_attempt": "2026-03-11 15:35:33",
+      "attempts": 18,
+      "correct": 18,
+      "last_attempt": "2026-04-07 10:05:37",
       "success_rate": 100.0
     },
     "cent": {
@@ -2779,10 +2779,10 @@
       "success_rate": 100.0
     },
     "fight": {
-      "attempts": 17,
-      "correct": 15,
-      "last_attempt": "2026-03-31 15:13:46",
-      "success_rate": 88.2
+      "attempts": 18,
+      "correct": 16,
+      "last_attempt": "2026-04-07 10:34:55",
+      "success_rate": 88.9
     },
     "movie": {
       "attempts": 4,
@@ -2851,9 +2851,9 @@
       "success_rate": 100.0
     },
     "hello": {
-      "attempts": 5,
-      "correct": 5,
-      "last_attempt": "2026-03-12 15:56:31",
+      "attempts": 6,
+      "correct": 6,
+      "last_attempt": "2026-04-07 10:00:47",
       "success_rate": 100.0
     },
     "past": {
@@ -2899,9 +2899,9 @@
       "success_rate": 100.0
     },
     "short": {
-      "attempts": 11,
-      "correct": 11,
-      "last_attempt": "2026-03-12 15:54:54",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 10:00:02",
       "success_rate": 100.0
     },
     "note": {
@@ -2917,9 +2917,9 @@
       "success_rate": 100.0
     },
     "night": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-11 14:19:47",
+      "attempts": 8,
+      "correct": 8,
+      "last_attempt": "2026-04-07 09:58:00",
       "success_rate": 100.0
     },
     "lemon": {
@@ -2959,10 +2959,10 @@
       "success_rate": 100.0
     },
     "afraid": {
-      "attempts": 21,
-      "correct": 20,
-      "last_attempt": "2026-03-31 14:14:33",
-      "success_rate": 95.2
+      "attempts": 23,
+      "correct": 22,
+      "last_attempt": "2026-04-07 11:28:23",
+      "success_rate": 95.7
     },
     "title": {
       "attempts": 6,
@@ -3019,9 +3019,9 @@
       "success_rate": 100.0
     },
     "gate": {
-      "attempts": 18,
-      "correct": 18,
-      "last_attempt": "2026-03-04 15:28:11",
+      "attempts": 19,
+      "correct": 19,
+      "last_attempt": "2026-04-07 10:00:41",
       "success_rate": 100.0
     },
     "invite": {
@@ -3031,9 +3031,9 @@
       "success_rate": 100.0
     },
     "remember": {
-      "attempts": 11,
-      "correct": 11,
-      "last_attempt": "2026-03-18 17:27:45",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 09:52:33",
       "success_rate": 100.0
     },
     "really": {
@@ -3097,15 +3097,15 @@
       "success_rate": 100.0
     },
     "thousand": {
-      "attempts": 18,
-      "correct": 18,
-      "last_attempt": "2026-03-30 19:43:39",
+      "attempts": 19,
+      "correct": 19,
+      "last_attempt": "2026-04-07 10:02:05",
       "success_rate": 100.0
     },
     "penny": {
-      "attempts": 17,
-      "correct": 17,
-      "last_attempt": "2026-03-02 16:35:38",
+      "attempts": 18,
+      "correct": 18,
+      "last_attempt": "2026-04-07 09:52:25",
       "success_rate": 100.0
     },
     "real": {
@@ -3139,9 +3139,9 @@
       "success_rate": 100.0
     },
     "morning": {
-      "attempts": 11,
-      "correct": 11,
-      "last_attempt": "2026-03-12 15:55:00",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 09:44:02",
       "success_rate": 100.0
     },
     "rest": {
@@ -3193,9 +3193,9 @@
       "success_rate": 100.0
     },
     "reporter": {
-      "attempts": 9,
-      "correct": 9,
-      "last_attempt": "2026-02-26 15:35:07",
+      "attempts": 10,
+      "correct": 10,
+      "last_attempt": "2026-04-07 09:56:06",
       "success_rate": 100.0
     },
     "farm": {
@@ -3241,9 +3241,9 @@
       "success_rate": 100.0
     },
     "vegetable": {
-      "attempts": 16,
-      "correct": 16,
-      "last_attempt": "2026-03-30 17:00:04",
+      "attempts": 17,
+      "correct": 17,
+      "last_attempt": "2026-04-07 09:59:51",
       "success_rate": 100.0
     },
     "grade": {
@@ -3295,9 +3295,9 @@
       "success_rate": 100.0
     },
     "dragon": {
-      "attempts": 20,
-      "correct": 20,
-      "last_attempt": "2026-03-02 14:16:08",
+      "attempts": 21,
+      "correct": 21,
+      "last_attempt": "2026-04-07 10:03:44",
       "success_rate": 100.0
     },
     "helpful": {
@@ -3367,9 +3367,9 @@
       "success_rate": 100.0
     },
     "birth": {
-      "attempts": 24,
-      "correct": 24,
-      "last_attempt": "2026-03-30 17:52:58",
+      "attempts": 25,
+      "correct": 25,
+      "last_attempt": "2026-04-07 09:57:03",
       "success_rate": 100.0
     },
     "bear": {
@@ -3427,9 +3427,9 @@
       "success_rate": 100.0
     },
     "place": {
-      "attempts": 22,
-      "correct": 22,
-      "last_attempt": "2026-03-11 15:36:13",
+      "attempts": 23,
+      "correct": 23,
+      "last_attempt": "2026-04-07 10:00:00",
       "success_rate": 100.0
     },
     "catch": {
@@ -3445,9 +3445,9 @@
       "success_rate": 100.0
     },
     "monkey": {
-      "attempts": 8,
-      "correct": 8,
-      "last_attempt": "2026-03-30 16:59:24",
+      "attempts": 9,
+      "correct": 9,
+      "last_attempt": "2026-04-07 10:01:07",
       "success_rate": 100.0
     },
     "actress": {
@@ -3487,15 +3487,15 @@
       "success_rate": 100.0
     },
     "pea": {
-      "attempts": 24,
-      "correct": 24,
-      "last_attempt": "2026-03-30 19:45:25",
+      "attempts": 25,
+      "correct": 25,
+      "last_attempt": "2026-04-07 09:52:51",
       "success_rate": 100.0
     },
     "garden": {
-      "attempts": 20,
-      "correct": 20,
-      "last_attempt": "2026-03-02 14:12:42",
+      "attempts": 21,
+      "correct": 21,
+      "last_attempt": "2026-04-07 09:57:21",
       "success_rate": 100.0
     },
     "purple": {
@@ -3535,10 +3535,10 @@
       "success_rate": 100.0
     },
     "plant": {
-      "attempts": 14,
-      "correct": 14,
-      "last_attempt": "2026-02-28 13:55:33",
-      "success_rate": 100.0
+      "attempts": 16,
+      "correct": 15,
+      "last_attempt": "2026-04-07 10:05:47",
+      "success_rate": 93.8
     },
     "bee": {
       "attempts": 5,
@@ -3559,9 +3559,9 @@
       "success_rate": 100.0
     },
     "ant": {
-      "attempts": 21,
-      "correct": 21,
-      "last_attempt": "2026-03-18 15:36:02",
+      "attempts": 22,
+      "correct": 22,
+      "last_attempt": "2026-04-07 09:52:52",
       "success_rate": 100.0
     },
     "act": {
@@ -3577,10 +3577,10 @@
       "success_rate": 100.0
     },
     "strict": {
-      "attempts": 26,
-      "correct": 22,
-      "last_attempt": "2026-03-31 17:23:55",
-      "success_rate": 84.6
+      "attempts": 32,
+      "correct": 28,
+      "last_attempt": "2026-04-07 16:12:40",
+      "success_rate": 87.5
     },
     "asleep": {
       "attempts": 22,
@@ -3589,9 +3589,9 @@
       "success_rate": 100.0
     },
     "hurt": {
-      "attempts": 24,
-      "correct": 24,
-      "last_attempt": "2026-03-12 15:56:03",
+      "attempts": 25,
+      "correct": 25,
+      "last_attempt": "2026-04-07 09:43:48",
       "success_rate": 100.0
     },
     "super": {
@@ -3649,9 +3649,9 @@
       "success_rate": 100.0
     },
     "decision": {
-      "attempts": 13,
-      "correct": 13,
-      "last_attempt": "2026-03-11 15:35:45",
+      "attempts": 14,
+      "correct": 14,
+      "last_attempt": "2026-04-07 09:59:09",
       "success_rate": 100.0
     },
     "world": {
@@ -3667,21 +3667,21 @@
       "success_rate": 100.0
     },
     "milk": {
-      "attempts": 3,
-      "correct": 3,
-      "last_attempt": "2026-03-17 15:48:51",
+      "attempts": 4,
+      "correct": 4,
+      "last_attempt": "2026-04-07 09:54:34",
       "success_rate": 100.0
     },
     "hope": {
-      "attempts": 21,
-      "correct": 21,
-      "last_attempt": "2026-03-31 11:31:27",
+      "attempts": 23,
+      "correct": 23,
+      "last_attempt": "2026-04-07 11:21:51",
       "success_rate": 100.0
     },
     "cheque": {
-      "attempts": 11,
-      "correct": 11,
-      "last_attempt": "2026-03-30 16:56:53",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 09:59:24",
       "success_rate": 100.0
     },
     "eve": {
@@ -3697,9 +3697,9 @@
       "success_rate": 100.0
     },
     "waste": {
-      "attempts": 19,
-      "correct": 19,
-      "last_attempt": "2026-03-31 10:59:14",
+      "attempts": 21,
+      "correct": 21,
+      "last_attempt": "2026-04-07 10:54:11",
       "success_rate": 100.0
     },
     "hospital": {
@@ -3721,9 +3721,9 @@
       "success_rate": 100.0
     },
     "hole": {
-      "attempts": 11,
-      "correct": 11,
-      "last_attempt": "2026-03-11 14:20:30",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 09:58:27",
       "success_rate": 100.0
     },
     "worst": {
@@ -3745,9 +3745,9 @@
       "success_rate": 100.0
     },
     "worker": {
-      "attempts": 10,
-      "correct": 10,
-      "last_attempt": "2026-03-17 16:53:35",
+      "attempts": 11,
+      "correct": 11,
+      "last_attempt": "2026-04-07 10:05:23",
       "success_rate": 100.0
     },
     "hot": {
@@ -3757,10 +3757,10 @@
       "success_rate": 100.0
     },
     "hotel": {
-      "attempts": 15,
-      "correct": 14,
-      "last_attempt": "2026-03-31 14:14:27",
-      "success_rate": 93.3
+      "attempts": 18,
+      "correct": 17,
+      "last_attempt": "2026-04-07 11:22:47",
+      "success_rate": 94.4
     },
     "awake": {
       "attempts": 12,
@@ -3769,10 +3769,10 @@
       "success_rate": 100.0
     },
     "cheese": {
-      "attempts": 10,
-      "correct": 10,
-      "last_attempt": "2026-03-30 16:49:53",
-      "success_rate": 100.0
+      "attempts": 12,
+      "correct": 11,
+      "last_attempt": "2026-04-07 10:05:44",
+      "success_rate": 91.7
     },
     "email": {
       "attempts": 3,
@@ -3787,9 +3787,9 @@
       "success_rate": 100.0
     },
     "shoe": {
-      "attempts": 10,
-      "correct": 10,
-      "last_attempt": "2026-03-10 17:30:22",
+      "attempts": 11,
+      "correct": 11,
+      "last_attempt": "2026-04-07 10:04:54",
       "success_rate": 100.0
     },
     "double": {
@@ -3835,9 +3835,9 @@
       "success_rate": 100.0
     },
     "hate": {
-      "attempts": 20,
-      "correct": 20,
-      "last_attempt": "2026-03-31 14:13:54",
+      "attempts": 30,
+      "correct": 30,
+      "last_attempt": "2026-04-07 16:17:59",
       "success_rate": 100.0
     },
     "brown": {
@@ -3859,9 +3859,9 @@
       "success_rate": 100.0
     },
     "wall": {
-      "attempts": 11,
-      "correct": 11,
-      "last_attempt": "2026-03-10 17:30:19",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 09:55:57",
       "success_rate": 100.0
     },
     "eye": {
@@ -3871,10 +3871,10 @@
       "success_rate": 75.0
     },
     "happy": {
-      "attempts": 5,
-      "correct": 4,
-      "last_attempt": "2026-03-09 17:58:58",
-      "success_rate": 80.0
+      "attempts": 6,
+      "correct": 5,
+      "last_attempt": "2026-04-07 10:01:00",
+      "success_rate": 83.3
     },
     "work": {
       "attempts": 4,
@@ -3901,9 +3901,9 @@
       "success_rate": 100.0
     },
     "worry": {
-      "attempts": 8,
-      "correct": 8,
-      "last_attempt": "2026-03-17 16:16:06",
+      "attempts": 9,
+      "correct": 9,
+      "last_attempt": "2026-04-07 10:01:13",
       "success_rate": 100.0
     },
     "warm": {
@@ -3913,9 +3913,9 @@
       "success_rate": 90.0
     },
     "top": {
-      "attempts": 1,
-      "correct": 1,
-      "last_attempt": "2026-03-02 14:12:24",
+      "attempts": 2,
+      "correct": 2,
+      "last_attempt": "2026-04-07 09:53:54",
       "success_rate": 100.0
     },
     "worse": {
@@ -3937,9 +3937,9 @@
       "success_rate": 100.0
     },
     "walk": {
-      "attempts": 12,
-      "correct": 12,
-      "last_attempt": "2026-03-30 19:46:45",
+      "attempts": 13,
+      "correct": 13,
+      "last_attempt": "2026-04-07 09:55:49",
       "success_rate": 100.0
     },
     "life": {
@@ -3991,9 +3991,9 @@
       "success_rate": 100.0
     },
     "sky": {
-      "attempts": 3,
-      "correct": 3,
-      "last_attempt": "2026-03-12 15:29:07",
+      "attempts": 4,
+      "correct": 4,
+      "last_attempt": "2026-04-07 10:03:03",
       "success_rate": 100.0
     },
     "turn": {
@@ -4003,33 +4003,33 @@
       "success_rate": 100.0
     },
     "better": {
-      "attempts": 8,
-      "correct": 8,
-      "last_attempt": "2026-03-31 17:23:23",
+      "attempts": 18,
+      "correct": 18,
+      "last_attempt": "2026-04-07 16:18:25",
       "success_rate": 100.0
     },
     "late": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 10:58:39",
+      "attempts": 17,
+      "correct": 17,
+      "last_attempt": "2026-04-07 16:18:05",
       "success_rate": 100.0
     },
     "used": {
-      "attempts": 8,
-      "correct": 7,
-      "last_attempt": "2026-03-31 14:52:17",
-      "success_rate": 87.5
+      "attempts": 11,
+      "correct": 10,
+      "last_attempt": "2026-04-07 14:10:56",
+      "success_rate": 90.9
     },
     "rather": {
-      "attempts": 8,
-      "correct": 8,
-      "last_attempt": "2026-03-31 11:08:22",
+      "attempts": 18,
+      "correct": 18,
+      "last_attempt": "2026-04-07 16:18:23",
       "success_rate": 100.0
     },
     "text": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 11:13:48",
+      "attempts": 9,
+      "correct": 9,
+      "last_attempt": "2026-04-07 11:05:42",
       "success_rate": 100.0
     },
     "take": {
@@ -4039,111 +4039,111 @@
       "success_rate": 100.0
     },
     "lord": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 11:31:09",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 16:11:35",
       "success_rate": 100.0
     },
     "use": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 15:14:38",
+      "attempts": 9,
+      "correct": 9,
+      "last_attempt": "2026-04-07 11:10:08",
       "success_rate": 100.0
     },
     "talk": {
-      "attempts": 8,
-      "correct": 8,
-      "last_attempt": "2026-03-31 11:31:32",
+      "attempts": 13,
+      "correct": 13,
+      "last_attempt": "2026-04-07 15:50:09",
       "success_rate": 100.0
     },
     "adult": {
-      "attempts": 8,
-      "correct": 8,
-      "last_attempt": "2026-03-31 11:08:49",
+      "attempts": 13,
+      "correct": 13,
+      "last_attempt": "2026-04-07 15:03:21",
       "success_rate": 100.0
     },
     "truth": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 11:31:18",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 16:12:53",
       "success_rate": 100.0
     },
     "stranger": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 11:09:34",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 16:10:03",
       "success_rate": 100.0
     },
     "hit": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 11:08:51",
+      "attempts": 8,
+      "correct": 8,
+      "last_attempt": "2026-04-07 10:47:53",
       "success_rate": 100.0
     },
     "strong": {
-      "attempts": 8,
-      "correct": 8,
-      "last_attempt": "2026-03-31 11:31:21",
+      "attempts": 9,
+      "correct": 9,
+      "last_attempt": "2026-04-07 10:40:38",
       "success_rate": 100.0
     },
     "large": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 14:13:57",
+      "attempts": 17,
+      "correct": 17,
+      "last_attempt": "2026-04-07 16:18:02",
       "success_rate": 100.0
     },
     "funny": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 11:14:09",
+      "attempts": 9,
+      "correct": 9,
+      "last_attempt": "2026-04-07 11:25:28",
       "success_rate": 100.0
     },
     "against": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 10:59:05",
+      "attempts": 9,
+      "correct": 9,
+      "last_attempt": "2026-04-07 10:46:40",
       "success_rate": 100.0
     },
     "site": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 14:16:23",
+      "attempts": 11,
+      "correct": 11,
+      "last_attempt": "2026-04-07 15:01:41",
       "success_rate": 100.0
     },
     "crayon": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 11:09:05",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 15:53:20",
       "success_rate": 100.0
     },
     "table": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 14:37:18",
+      "attempts": 8,
+      "correct": 8,
+      "last_attempt": "2026-04-07 10:33:44",
       "success_rate": 100.0
     },
     "high": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 11:13:13",
+      "attempts": 9,
+      "correct": 9,
+      "last_attempt": "2026-04-07 10:55:30",
       "success_rate": 100.0
     },
     "unusual": {
-      "attempts": 7,
-      "correct": 6,
-      "last_attempt": "2026-03-31 17:23:45",
-      "success_rate": 85.7
+      "attempts": 17,
+      "correct": 16,
+      "last_attempt": "2026-04-07 16:18:13",
+      "success_rate": 94.1
     },
     "point": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 11:09:14",
+      "attempts": 8,
+      "correct": 8,
+      "last_attempt": "2026-04-07 10:58:54",
       "success_rate": 100.0
     },
     "traffic": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 11:08:33",
+      "attempts": 11,
+      "correct": 11,
+      "last_attempt": "2026-04-07 16:02:16",
       "success_rate": 100.0
     },
     "must": {
@@ -4153,21 +4153,21 @@
       "success_rate": 100.0
     },
     "minute": {
-      "attempts": 8,
-      "correct": 8,
-      "last_attempt": "2026-03-31 11:09:11",
+      "attempts": 9,
+      "correct": 9,
+      "last_attempt": "2026-04-07 09:56:24",
       "success_rate": 100.0
     },
     "trouble": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 10:58:49",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 16:02:48",
       "success_rate": 100.0
     },
     "guitar": {
-      "attempts": 8,
-      "correct": 8,
-      "last_attempt": "2026-03-31 11:31:46",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 15:19:19",
       "success_rate": 100.0
     },
     "team": {
@@ -4177,69 +4177,69 @@
       "success_rate": 100.0
     },
     "enter": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 11:08:25",
+      "attempts": 7,
+      "correct": 7,
+      "last_attempt": "2026-04-07 10:55:43",
       "success_rate": 100.0
     },
     "strange": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 15:13:28",
+      "attempts": 11,
+      "correct": 11,
+      "last_attempt": "2026-04-07 15:01:47",
       "success_rate": 100.0
     },
     "date": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 11:09:18",
+      "attempts": 7,
+      "correct": 7,
+      "last_attempt": "2026-04-07 10:35:41",
       "success_rate": 100.0
     },
     "stop": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 11:13:07",
+      "attempts": 8,
+      "correct": 8,
+      "last_attempt": "2026-04-07 11:06:41",
       "success_rate": 100.0
     },
     "best": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 14:37:17",
+      "attempts": 10,
+      "correct": 10,
+      "last_attempt": "2026-04-07 15:02:26",
       "success_rate": 100.0
     },
     "usual": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 11:32:00",
+      "attempts": 17,
+      "correct": 17,
+      "last_attempt": "2026-04-07 16:18:20",
       "success_rate": 100.0
     },
     "stay": {
-      "attempts": 8,
-      "correct": 8,
-      "last_attempt": "2026-03-31 11:31:39",
+      "attempts": 10,
+      "correct": 10,
+      "last_attempt": "2026-04-07 11:26:35",
       "success_rate": 100.0
     },
     "lot": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 14:13:38",
+      "attempts": 11,
+      "correct": 11,
+      "last_attempt": "2026-04-07 16:03:00",
       "success_rate": 100.0
     },
     "history": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 11:31:54",
+      "attempts": 7,
+      "correct": 7,
+      "last_attempt": "2026-04-07 10:39:35",
       "success_rate": 100.0
     },
     "hide": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 10:59:23",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 16:11:45",
       "success_rate": 100.0
     },
     "useless": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 11:13:11",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 15:52:41",
       "success_rate": 100.0
     },
     "ring": {
@@ -4249,63 +4249,63 @@
       "success_rate": 100.0
     },
     "finish": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 14:14:18",
+      "attempts": 8,
+      "correct": 8,
+      "last_attempt": "2026-04-07 11:04:49",
       "success_rate": 100.0
     },
     "trust": {
-      "attempts": 10,
-      "correct": 8,
-      "last_attempt": "2026-03-31 14:37:46",
-      "success_rate": 80.0
-    },
-    "true": {
-      "attempts": 8,
-      "correct": 7,
-      "last_attempt": "2026-03-31 11:13:45",
+      "attempts": 16,
+      "correct": 14,
+      "last_attempt": "2026-04-07 16:12:11",
       "success_rate": 87.5
     },
+    "true": {
+      "attempts": 13,
+      "correct": 12,
+      "last_attempt": "2026-04-07 16:03:12",
+      "success_rate": 92.3
+    },
     "tall": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 11:31:51",
+      "attempts": 7,
+      "correct": 7,
+      "last_attempt": "2026-04-07 11:06:33",
       "success_rate": 100.0
     },
     "potato": {
-      "attempts": 8,
-      "correct": 8,
-      "last_attempt": "2026-03-31 14:13:29",
+      "attempts": 10,
+      "correct": 10,
+      "last_attempt": "2026-04-07 11:05:08",
       "success_rate": 100.0
     },
     "start": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 15:14:00",
+      "attempts": 8,
+      "correct": 8,
+      "last_attempt": "2026-04-07 10:59:14",
       "success_rate": 100.0
     },
     "run": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 15:14:40",
+      "attempts": 7,
+      "correct": 7,
+      "last_attempt": "2026-04-07 09:43:40",
       "success_rate": 100.0
     },
     "toilet": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 15:14:17",
+      "attempts": 17,
+      "correct": 17,
+      "last_attempt": "2026-04-07 16:18:31",
       "success_rate": 100.0
     },
     "bite": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 15:14:36",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 16:10:36",
       "success_rate": 100.0
     },
     "truck": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 10:59:34",
+      "attempts": 13,
+      "correct": 13,
+      "last_attempt": "2026-04-07 16:10:46",
       "success_rate": 100.0
     },
     "bike": {
@@ -4315,45 +4315,45 @@
       "success_rate": 100.0
     },
     "store": {
-      "attempts": 9,
-      "correct": 8,
-      "last_attempt": "2026-03-31 14:13:45",
-      "success_rate": 88.9
+      "attempts": 11,
+      "correct": 10,
+      "last_attempt": "2026-04-07 11:26:16",
+      "success_rate": 90.9
     },
     "even": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 10:58:58",
+      "attempts": 11,
+      "correct": 11,
+      "last_attempt": "2026-04-07 15:29:24",
       "success_rate": 100.0
     },
     "fun": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 14:13:25",
+      "attempts": 8,
+      "correct": 8,
+      "last_attempt": "2026-04-07 11:17:41",
       "success_rate": 100.0
     },
     "salt": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 14:13:31",
+      "attempts": 8,
+      "correct": 8,
+      "last_attempt": "2026-04-07 10:55:11",
       "success_rate": 100.0
     },
     "usually": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 11:13:06",
+      "attempts": 13,
+      "correct": 13,
+      "last_attempt": "2026-04-07 16:11:05",
       "success_rate": 100.0
     },
     "last": {
-      "attempts": 7,
-      "correct": 7,
-      "last_attempt": "2026-03-31 15:13:25",
+      "attempts": 11,
+      "correct": 11,
+      "last_attempt": "2026-04-07 15:02:46",
       "success_rate": 100.0
     },
     "still": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 11:13:20",
+      "attempts": 17,
+      "correct": 17,
+      "last_attempt": "2026-04-07 16:18:16",
       "success_rate": 100.0
     },
     "noodle": {
@@ -4363,33 +4363,33 @@
       "success_rate": 100.0
     },
     "noon": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 11:13:27",
+      "attempts": 7,
+      "correct": 7,
+      "last_attempt": "2026-04-07 10:33:35",
       "success_rate": 100.0
     },
     "term": {
-      "attempts": 8,
-      "correct": 7,
-      "last_attempt": "2026-03-31 14:14:13",
-      "success_rate": 87.5
+      "attempts": 12,
+      "correct": 11,
+      "last_attempt": "2026-04-07 15:02:58",
+      "success_rate": 91.7
     },
     "bit": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 14:13:42",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 16:10:53",
       "success_rate": 100.0
     },
     "later": {
-      "attempts": 8,
-      "correct": 8,
-      "last_attempt": "2026-03-31 11:12:38",
+      "attempts": 18,
+      "correct": 18,
+      "last_attempt": "2026-04-07 16:18:07",
       "success_rate": 100.0
     },
     "just": {
-      "attempts": 8,
-      "correct": 8,
-      "last_attempt": "2026-03-31 11:13:32",
+      "attempts": 10,
+      "correct": 10,
+      "last_attempt": "2026-04-07 11:02:09",
       "success_rate": 100.0
     },
     "oil": {
@@ -4399,22 +4399,22 @@
       "success_rate": 100.0
     },
     "reach": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 11:09:27",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 16:12:21",
       "success_rate": 100.0
     },
     "useful": {
-      "attempts": 6,
-      "correct": 6,
-      "last_attempt": "2026-03-31 17:23:38",
+      "attempts": 12,
+      "correct": 12,
+      "last_attempt": "2026-04-07 16:11:23",
       "success_rate": 100.0
     }
   },
   "stats": {
-    "total_practiced": 11336,
-    "total_correct": 10917,
-    "last_practice": "2026-03-31 17:23:55",
+    "total_practiced": 11726,
+    "total_correct": 11304,
+    "last_practice": "2026-04-07 16:18:35",
     "quiz_records": [
       {
         "date": "2026-01-04 16:01:42",
@@ -4866,6 +4866,16 @@
         "time_used": 9330.3,
         "grade": "优秀 (S级)",
         "wrong_count": 4
+      },
+      {
+        "date": "2026-04-07 10:05:37",
+        "type": "汉译英拼写",
+        "total": 100,
+        "correct": 97,
+        "accuracy": 97.0,
+        "time_used": 1350.23,
+        "grade": "优秀 (S级)",
+        "wrong_count": 3
       }
     ]
   }
